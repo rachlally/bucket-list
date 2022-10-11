@@ -3,3 +3,8 @@
     padding: 0;
     background-color: salmon;
 }
+
+img{
+    max-width: 200px;
+    max-height: 200px;
+}
