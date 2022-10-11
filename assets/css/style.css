@@ -3,14 +3,7 @@
     padding: 0;
     background-color: salmon;
 }
-<<<<<<< HEAD
-.row {
-    justify-content: baseline;
-    float: left;
-=======
-
-img{
+img {
     max-width: 200px;
     max-height: 200px;
->>>>>>> 16ac8bc07467951d5f650e31926961fc3e9c4c7f
 }
