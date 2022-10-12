@@ -40,4 +40,3 @@ btn.addEventListener("click", getApi)
      console.log(data.results[0].name);
      console.log(data.results[0].website);
  })
-
