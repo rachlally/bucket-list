@@ -20,10 +20,6 @@ function getApi(event) {
 getApi()
 btn.addEventListener("click", getApi)
 
-let text = localStorage.getItem("testJSON")
-let obj = JSON.parse(text);
-document.getElementById.("what")innerHTML = obj;
-
  const options = {
  	method: 'GET',
  	headers: {
