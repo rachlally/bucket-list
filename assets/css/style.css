@@ -44,3 +44,6 @@ article {
     font-weight: bolder;
     border: none;
   }
+  .nav-wrapper {
+    display: fixed;
+  }
