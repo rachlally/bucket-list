@@ -14,93 +14,88 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Bucket List Scrapbook</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#what">What is Bucket List Scrapbook</a></li>
-      <li><a href="#list">Your Bucket List</a></li>
-      <li><a href="#about">About Us</a></li>
-      
-    </ul>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Bucket List Scrapbook</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#what">What is Bucket List Scrapbook</a></li>
+        <li><a href="#list">Your Bucket List</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="what">
+    <h1>What is Bucket List Scrapbook?</h1>
+    <h4>Bucket List Scrapbook is a place where you can brainstorm bucket list items, complete them and store photos of your experiences! Bucket List Scrapbook is all about making memories by doing the things you've always wanted to do and creating a diary entry for each list item. On our site you can even show the location of where you've completed each Bucket List experience. If you're not sure of what to put on your bucket list, go ahead and click the "FILL MY BUCKET" button below!</h4>
+    <br/>
   </div>
-</nav>
 
-<div id="what">
-  <h1>What is Bucket List Scrapbook?</h1>
-  <h4>Bucket List Scrapbook is a place where you can brainstorm bucket list items, complete them and store photos of your experiences! Bucket List Scrapbook is all about making memories by doing the things you've always wanted to do and creating a diary entry for each list item. On our site you can even show the location of where you've completed each Bucket List experience. If you're not sure of what to put on your bucket list, go ahead and click the "FILL MY BUCKET" button below!</h4>
-  <br/>
-</div>
-<article>
-  <button class="btn btn-outline-success" id="btn" type="submit">FILL MY BUCKET</button>
-  <div class="container" id="activity"></div>
-</article>
+  <article>
+    <button class="btn btn-outline-success" id="btn" type="submit">FILL MY BUCKET</button>
+    <div class="container" id="activity"></div>
+  </article>
 
-<div id="title-card">
-  <textarea id="title" name="title">Title Your Adventure here!</textarea>
-</div>
+  <div id="title-card">
+    <textarea id="title" name="title">Title Your Adventure here!</textarea>
+  </div>
   
+    <label for="files">Select photos from your adventure!</label>
+    <input type="file" id="files" multiple="multiple" accept="image/png, image/jpg">
+    <output id="result"></output>
+
+  <div id="list">
+    <label for="freeform">
+      Write about your adventure so you can remember it later!
+    </label> 
+  </div>
+
+  <textarea id="freeform" name="freeform" rows="4" cols="50">Enter text here... </textarea>
+
+  <div id="title-card">
+    <textarea id="title" name="title">Title Your Adventrure here!</textarea>
+  </div>
+
+    <label for="files">Select photos from your adventure!</label>
+    <input type="file" id="files" multiple="multiple" accept="image/png, image/jpg">
+    <output id="result"></output>
+
+  <div id="list">
+      <label for="freeform">
+        Write about your adventure so you can remember it later!
+      </label> 
+  </div>
+      
+    <textarea id="freeform" name="freeform" rows="4" cols="50">Enter text here... </textarea>
+  
+  <div id="title-card">
+    <textarea id="title" name="title">Title Your Adventure here!</textarea>
+  </div>
+
   <label for="files">Select photos from your adventure!</label>
   <input type="file" id="files" multiple="multiple" accept="image/png, image/jpg">
   <output id="result"></output>
 
-<div id="list">
-    <label for="freeform">
-      Write about your adventure so you can remember it later!
-    </label> 
-</div>
-
-
-<div id="btn">
-<button class="btn btn-outline-success" id="btn" type="submit">FILL MY BUCKET</button>
-<article>
-<div class="container" id="activity"></div>
-</article>
-
-<div id="title-card">
-<textarea id="title" name="title">Title Your Adventrure here!</textarea>
-</div>
-
-  <label for="files">Select photos from your adventure!</label>
-  <input type="file" id="files" multiple="multiple" accept="image/png, image/jpg">
-  <output id="result"></output>
-
-<div id="list">
-    <label for="freeform">
-      Write about your adventrure so you can remember it later!
-    </label> 
-</div>
-
+  <div id="list">
+      <label for="freeform">
+        Write about your adventure so you can remember it later!
+      </label> 
+  </div>
+    
     <textarea id="freeform" name="freeform" rows="4" cols="50">Enter text here... </textarea>
 
-<div id="title-card">
-  <textarea id="title" name="title">Title Your Adventure here!</textarea>
-</div>
-
-<label for="files">Select photos from your adventure!</label>
-<input type="file" id="files" multiple="multiple" accept="image/png, image/jpg">
-<output id="result"></output>
-
-<div id="list">
-    <label for="freeform">
-      Write about your adventure so you can remember it later!
-    </label> 
-</div>
-  
-    <textarea id="freeform" name="freeform" rows="4" cols="50">Enter text here... </textarea>
-
-          
-<div id="about">
-  <h1>About Us</h1>
-  <img src="assets/images/basic image.png" alt="basic image">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
-  <img src="assets/images/basic image.png" alt="basic image">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
-  <img src="assets/images/basic image.png" alt="basic image">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptas</p>
-  <img src="assets/images/basic image.png" alt="basic image">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
-</div>
+            
+  <div id="about">
+    <h1>About Us</h1>
+    <img src="assets/images/basic image.png" alt="basic image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
+    <img src="assets/images/basic image.png" alt="basic image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
+    <img src="assets/images/basic image.png" alt="basic image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptas</p>
+    <img src="assets/images/basic image.png" alt="basic image">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, officiis nostrum omnis assumenda magni doloremque adipisci, earum reprehenderit voluptatibus maiores debitis vel cumque quisquam incidunt, quibusdam eaque ipsam expedita saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi distinctio quia, sapiente illum pariatur necessitatibus cupiditate autem. Exercitationem iure voluptas enim adipisci perferendis. Laboriosam voluptate autem totam tempora vitae!</p>
+  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/js/script.js"></script>
