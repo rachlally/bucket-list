@@ -49,10 +49,17 @@ article {
     border: none;
   }
 
+
   #display_image{
     width: 375px;
     height: 211px;
     border: 1px solid black;
     background-position: center;
     background-size: cover;
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
   }
