@@ -11,6 +11,7 @@ function getApi(event) {
 
     })
     .then(function(data) {
+        event.preventDefault()
         console.log(data)
         activity.textContent = data.activity
     })

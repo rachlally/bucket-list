@@ -1,11 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color: salmon;
-    
 }
-nav {
-    background-image: linear-gradient (blue, white);
+article {
+    background-color: rgb(107, 39, 233);
+    background-image: linear-gradient(blue, white)
+}
+h1 {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    padding: 0;
+    font-size: 20px;
 }
 
 nav {
@@ -27,13 +36,43 @@ label {
     color: black;
     font-weight: bolder;
 }
-article {
-    padding: 25px;
-    margin: auto;
+blockquote{
+    background-image: linear-gradient(white, blue);
+    margin: 0;
+    color: white;
+}
+.btn {
     text-align: left;
     font-weight: bolder;
     font-size: 25px;
+    border-radius: 50px;
+    margin: 25px;
 }
+.container {
+    margin: 0px;
+    padding: 0;
+    text-align: inherit;
+    font-weight: bolder;
+    font-size: 25px;
+    justify-content: relative;
+    max-width: fit-content;
+    
+}
+  #title {
+    width: 25%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left center;
+    font-weight: bolder;
+    font-size: 30px;
+    border: none;
+    color: black;
+  }
+  label {
+    font-size: 15px;
+  }
 #freeform {
     width: 25%;
     height: 100px;
@@ -41,22 +80,31 @@ article {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: salmon;
+    background-color: white;
     resize: none;
     position: relative;
     border-radius: 50px;
   }
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(violet, blue);
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
 
-  #title {
-    width: 25%;
-    height: 60px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    background-color: salmon;
-    position: relative;
-    text-align: left center;
-    font-weight: bolder;
-    border: none;
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(blue, violet);
   }
 
 #result{
