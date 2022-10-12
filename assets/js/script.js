@@ -1,29 +1,20 @@
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
 
-var activityTitle1 = document.querySelector("#activityTitle1")
-var activityDescription1 = document.querySelector("#activityDescription1").value;
-
-var btn1 = document.querySelector("#btn1");
 
 
-    })
-    .then(function(data) {
-        event.preventDefault()
-        console.log(data)
-        activity.textContent = data.activity
-    })
+   
+$("#firstActivity").on("click", function () {
+    var bucketActivity1 = $("#freeform");
+    console.log(bucketActivity1);
+    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+})
 
-
-btn1.addEventListener("click", function(event){
-    event.preventDefault();
-
-    console.log(activityDescription1);
-    localStorage.setItem("Bucket List", activityDescription1);
-        
-    }
-
-);
+$("#secondActivity").on("click", function () {
+    var bucketActivity1 = $("#2");
+    console.log(bucketActivity1);
+    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+})
 
 
 
