@@ -1,17 +1,8 @@
-
-var local = ["a", "b", "c", "d"]
-var myJSON = JSON.stringify(local)
-localStorage.setItem("testJSON", myJSON)
-
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
 
 function getApi(event) {
     console.log(activity.value)
-    var requestUrl = 'https://www.boredapi.com/api/activity';
-
-
-function getApi() {
     var requestUrl = 'https://www.boredapi.com/api/activity';
 
     fetch(requestUrl)
@@ -21,21 +12,13 @@ function getApi() {
     })
     .then(function(data) {
         console.log(data)
-
-        console.log(data.activity);
         activity.textContent = data.activity
-
     })
 
 
 }
 getApi()
-}
 btn.addEventListener("click", getApi)
-
-let text = localStorage.getItem("testJSON")
-let obj = JSON.parse(text);
-document.getElementById.("what")innerHTML = obj;
 
  const options = {
  	method: 'GET',
@@ -57,4 +40,3 @@ document.getElementById.("what")innerHTML = obj;
      console.log(data.results[0].name);
      console.log(data.results[0].website);
  })
-
