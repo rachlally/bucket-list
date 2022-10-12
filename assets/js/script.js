@@ -1,5 +1,7 @@
-console.log("linked")
+var local = ["a", "b", "c", "d"]
+var myJSON = JSON.stringify(local)
+localStorage.setItem("testJSON", myJSON)
 
-$('#textarea1').val('New Text');
-M.textareaAutoResize($('#textarea1'));
-
+let text = localStorage.getItem("testJSON")
+let obj = JSON.parse(text);
+document.getElementById.("what")innerHTML = obj;
