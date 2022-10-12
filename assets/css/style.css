@@ -44,6 +44,9 @@ article {
     font-weight: bolder;
     border: none;
   }
-  .nav-wrapper {
-    display: fixed;
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: blueviolet;
   }
