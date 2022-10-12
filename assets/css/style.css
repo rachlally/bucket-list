@@ -3,7 +3,44 @@
     padding: 0;
     background-color: salmon;
 }
-img {
+
+img{
     max-width: 200px;
     max-height: 200px;
+    border-radius: 50px;
 }
+label {
+    color: black;
+    font-weight: bolder;
+}
+article {
+    padding: 25px;
+    margin: auto;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 25px;
+}
+#freeform {
+    width: 25%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: salmon;
+    resize: none;
+    position: relative;
+    border-radius: 50px;
+  }
+
+  #title {
+    width: 25%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: salmon;
+    position: relative;
+    text-align: left center;
+    font-weight: bolder;
+    border: none;
+  }
