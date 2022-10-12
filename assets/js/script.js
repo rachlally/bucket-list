@@ -41,14 +41,24 @@ btn.addEventListener("click", getApi)
      console.log(data.results[0].website);
  })
 
-//  const image_input = document.querySelector("#image_input")
-//  var uploaded_image = "";
+document.querySelector("#files").addEventListener("change", (e) => {
+    if(window.File && window.FileReader && window.FileList && window.Blob){
+        const files = e.target.files;
+        const output = document.querySelector("#result");
 
-//  image_input.addEventListener("change", function(){
-//     const reader = new FileReader();
-//     reader.addEventListener("load", () => {
-//         uploaded_image = reader/result;
-//         document.querySelector("#display_image").style.backgroundImage = url(uploaded_image);
-//     });
-//     reader.readAsDataURL(this.file);
-//  });
+        for (let i= 0; i < files.length; i++){
+            if(!files[i].type.match("image")) continue;
+            const picReader = new FileReader();
+            picReader.addEventListener("load", function(event){
+                const picFile = event.target;
+                const div = document.createElement("div");
+                div.innerHTML = '<img class="thumbnail" src="$(picFile.result)" + title="(picFile.name)"/>';
+                output.appendChild(div);
+            });
+            picReader.readAsDataURL(files[i]);
+        }
+
+    } else {
+        alert("Your browser does not support the File API")
+    }
+});
