@@ -1,7 +1,10 @@
-console.log("linked")
-$('#textarea1').val('New Text');
-M.textareaAutoResize($('#textarea1'));
 
+var btn = document.getElementById("btn")
+var activity = document.getElementById("activity")
+
+function getApi(event) {
+    console.log(activity.value)
+    var requestUrl = 'https://www.boredapi.com/api/activity';
 
 
 function getApi() {
@@ -14,12 +17,16 @@ function getApi() {
     })
     .then(function(data) {
         console.log(data)
+
         console.log(data.activity);
+        activity.textContent = data.activity
+
     })
 
 
 }
 getApi()
+
 
 const options = {
 	method: 'GET',
@@ -42,5 +49,8 @@ fetch("https://trueway-places.p.rapidapi.com/FindPlaceByText?text=" + locationSt
     console.log(data.results[0].website);
 })
 
+
+btn.addEventListener("click", getApi)
+git 
 
 
