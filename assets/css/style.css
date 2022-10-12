@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     background-color: salmon;
+    
+}
+nav {
+    background-image: linear-gradient (blue, white);
 }
 
 img{
