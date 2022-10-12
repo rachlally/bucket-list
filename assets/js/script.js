@@ -1,5 +1,18 @@
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
+   
+$("#firstActivity").on("click", function () {
+    var bucketActivity1 = $("#freeform");
+    console.log(bucketActivity1);
+    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+})
+
+$("#secondActivity").on("click", function () {
+    var bucketActivity1 = $("#2");
+    console.log(bucketActivity1);
+    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+})
+
 
 
 function getApi(event) {
