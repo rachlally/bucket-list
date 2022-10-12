@@ -48,5 +48,8 @@ article {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: blueviolet;
+  }
+
+  h1 {
+    padding-top: 5%;
   }
