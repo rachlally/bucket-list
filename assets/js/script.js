@@ -1,4 +1,8 @@
 
+var local = ["a", "b", "c", "d"]
+var myJSON = JSON.stringify(local)
+localStorage.setItem("testJSON", myJSON)
+
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
 
@@ -28,6 +32,11 @@ function getApi() {
 getApi()
 }
 btn.addEventListener("click", getApi)
+
+let text = localStorage.getItem("testJSON")
+let obj = JSON.parse(text);
+document.getElementById.("what")innerHTML = obj;
+
  const options = {
  	method: 'GET',
  	headers: {
@@ -48,3 +57,4 @@ btn.addEventListener("click", getApi)
      console.log(data.results[0].name);
      console.log(data.results[0].website);
  })
+
