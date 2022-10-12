@@ -17,6 +17,16 @@ h4 {
     font-size: 20px;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+  h1 {
+    padding-top: 5%;
+}
+
 img{
     max-width: 200px;
     max-height: 200px;
@@ -90,8 +100,27 @@ blockquote{
   main {
     flex: 1 0 auto;
   }
+
   footer {
     top: 0;
     width: 100%;
     background-image: linear-gradient(blue, violet);
   }
+
+#result{
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.thumbnail{
+    height: 192px;
+}
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+  }
+
