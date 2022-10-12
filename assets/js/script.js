@@ -1,10 +1,8 @@
-console.log("linked")
-$('#textarea1').val('New Text');
-M.textareaAutoResize($('#textarea1'));
+var btn = document.getElementById("btn")
+var activity = document.getElementById("activity")
 
-
-
-function getApi() {
+function getApi(event) {
+    console.log(activity.value)
     var requestUrl = 'https://www.boredapi.com/api/activity';
 
     fetch(requestUrl)
@@ -14,8 +12,13 @@ function getApi() {
     })
     .then(function(data) {
         console.log(data)
+        activity.textContent = data.activity
     })
 
 
 }
 getApi()
+btn.addEventListener("click", getApi)
+
+
+
