@@ -4,6 +4,16 @@
     background-color: salmon;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+  h1 {
+    padding-top: 5%;
+}
+
 img{
     max-width: 200px;
     max-height: 200px;
@@ -44,12 +54,4 @@ article {
     font-weight: bolder;
     border: none;
   }
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  h1 {
-    padding-top: 5%;
-  }
+ 
