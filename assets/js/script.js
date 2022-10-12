@@ -1,8 +1,13 @@
+
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
 
 function getApi(event) {
     console.log(activity.value)
+    var requestUrl = 'https://www.boredapi.com/api/activity';
+
+
+function getApi() {
     var requestUrl = 'https://www.boredapi.com/api/activity';
 
     fetch(requestUrl)
@@ -18,5 +23,7 @@ function getApi(event) {
 
 }
 getApi()
+
 btn.addEventListener("click", getApi)
 git 
+
