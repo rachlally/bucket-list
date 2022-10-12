@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+article {
+    background-color: rgb(107, 39, 233);
+    background-image: linear-gradient(blue, white)
+}
+h1 {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    padding: 0;
+    font-size: 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+  h1 {
+    padding-top: 5%;
+}
+
+img{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50px;
+}
+label {
+    color: black;
+    font-weight: bolder;
+}
+blockquote{
+    background-image: linear-gradient(white, blue);
+    margin: 0;
+    color: white;
+}
+.btn {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 25px;
+    border-radius: 50px;
+    margin: 25px;
+}
+.container {
+    margin: 0px;
+    padding: 0;
+    text-align: inherit;
+    font-weight: bolder;
+    font-size: 25px;
+    justify-content: relative;
+    max-width: fit-content;
+    
+}
+  #title {
+    width: 25%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left center;
+    font-weight: bolder;
+    font-size: 30px;
+    border: none;
+    color: black;
+  }
+  label {
+    font-size: 15px;
+  }
+#freeform {
+    width: 25%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    resize: none;
+    position: relative;
+    border-radius: 50px;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(violet, blue);
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(blue, violet);
+  }
+
+#result{
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.thumbnail{
+    height: 192px;
+}
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+  }
+
