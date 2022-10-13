@@ -39,7 +39,7 @@ saveBucketButton4.on("click", function () {
 
 //Render saved activity to page upon refresh
 function inIt () {
-    $("#freeform").val(JSON.parse(localStorage.getItem("Bucket List")));
+    $("#freeform1").val(JSON.parse(localStorage.getItem("Bucket List1")));
     $("#freeform2").val(JSON.parse(localStorage.getItem("Bucket List 2")));
     $("#freeform3").val(JSON.parse(localStorage.getItem("Bucket List 3")));
     $("#freeform4").val(JSON.parse(localStorage.getItem("Bucket List 4")));
