@@ -8,7 +8,9 @@ var activityHistory = [];
 
 
 savedBucketItem.on("click", function () {
+    var bucketTitle = $("#title");
     var bucketActivity1 = $("#freeform");
+    console.log(bucketTitle);
     console.log(bucketActivity1);
     localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
     //savedActivities();
