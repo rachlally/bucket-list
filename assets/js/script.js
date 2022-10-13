@@ -1,13 +1,16 @@
+//Global Variables
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
    
-var savedBucketItem = $('#firstActivityButton');
-var activityHistory = [];
-//Save activity input from user to local storage
+var saveBucketButton1 = $('#bucketButton1');
+var saveBucketButton2 = $('#bucketButton2');
+var saveBucketButton3 = $('#bucketButton3');
+var saveBucketButton4 = $('#bucketButton4');
 
 // Google Maps APi
 //AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
 
+<<<<<<< HEAD
 var map;
 function initMap(){
     var pointer = new google.maps.LatLng(47.60, 122.33);
@@ -62,32 +65,45 @@ var map= new google.maps.Map(document.getElementById('map'),{
 
 savedBucketItem.on("click", function () {
     var bucketActivity1 = $("#freeform");
+=======
+//Save activity input from user, on click, to local storage:
+saveBucketButton1.on("click", function () {
+    var bucketActivity1 = $("#freeform1");
+>>>>>>> 7a8c1d15aad9f16386c08525d77c4b2f83fc5f9d
     console.log(bucketActivity1);
-    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
-    //savedActivities();
+    localStorage.setItem("Bucket List 1", JSON.stringify (bucketActivity1.val()));
+   
 })
 
+saveBucketButton2.on("click", function () {
+    var bucketActivity2 = $("#freeform2");
+    console.log(bucketActivity2);
+    localStorage.setItem("Bucket List 2", JSON.stringify (bucketActivity2.val()));
+   
+})
+
+saveBucketButton3.on("click", function () {
+    var bucketActivity3 = $("#freeform3");
+    console.log(bucketActivity3);
+    localStorage.setItem("Bucket List 3", JSON.stringify (bucketActivity3.val()));
+   
+})
+
+saveBucketButton4.on("click", function () {
+    var bucketActivity4 = $("#freeform4");
+    console.log(bucketActivity4);
+    localStorage.setItem("Bucket List 4", JSON.stringify (bucketActivity4.val()));
+   
+})
+
+//Render saved activity to page upon refresh
 function inIt () {
-    $("#freeform").val(JSON.parse(localStorage.getItem("Bucket List")));
+    $("#freeform1").val(JSON.parse(localStorage.getItem("Bucket List1")));
+    $("#freeform2").val(JSON.parse(localStorage.getItem("Bucket List 2")));
+    $("#freeform3").val(JSON.parse(localStorage.getItem("Bucket List 3")));
+    $("#freeform4").val(JSON.parse(localStorage.getItem("Bucket List 4")));
 }
 inIt()
-
-// function savedActivities(saved){
-//     if (activityHistory.indexOf(saved) !== -1){
-//         return;
-//     }
-//     activityHistory.push(input);
-//     localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
-
-// }
-
-
-// $("#secondActivityButton").on("click", function () {
-//     var bucketActivity2 = $("#freeform");
-//     console.log(bucketActivity2);
-//     localStorage.setItem("Bucket List 2", JSON.stringify (bucketActivity2.val()));
-// })
-
 
 //Bored API Fetch function
 function getApi(event) {
