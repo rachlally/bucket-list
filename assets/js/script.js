@@ -9,67 +9,24 @@ var saveBucketButton4 = $('#bucketButton4');
 
 // Google Maps APi
 //AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-
-<<<<<<< HEAD
-var map;
 function initMap(){
-    var pointer = new google.maps.LatLng(47.60, 122.33);
+    const seattle = { lat:47.608, lng:-122.335};
+    const map = new google.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: seattle,
+    });
+}
 
-var map= new google.maps.Map(document.getElementById('map'),{
-            
-    infowindow = new google.maps.InfoWindow();       
-    
-
+const marker = new google.maps.Marker({
+    position: seattle,
+    map: map,
 });
-    }
 
-// {
-//     address: string,
-//     location: LatLng,
-//     placeId: string,
-//     bounds: LatLngBounds,
-//     componentRestrictions: GeocoderComponentRestrictions,
-//     region: string
-//    }
 
-// initialize map
 
-// var map;
-// var service;
-// var infowindow;
-
-// function initMap() {
-//   var sydney = new google.maps.LatLng(-33.867, 151.195);
-
-//   infowindow = new google.maps.InfoWindow();
-
-//   map = new google.maps.Map(
-//       document.getElementById('map'), {center: sydney, zoom: 15});
-
-//   var request = {
-//     query: 'Museum of Contemporary Art Australia',
-//     fields: ['name', 'geometry'],
-//   };
-
-//   var service = new google.maps.places.PlacesService(map);
-
-//   service.findPlaceFromQuery(request, function(results, status) {
-//     if (status === google.maps.places.PlacesServiceStatus.OK) {
-//       for (var i = 0; i < results.length; i++) {
-//         createMarker(results[i]);
-//       }
-//       map.setCenter(results[0].geometry.location);
-//     }
-//   });
-// }
-
-savedBucketItem.on("click", function () {
-    var bucketActivity1 = $("#freeform");
-=======
 //Save activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
->>>>>>> 7a8c1d15aad9f16386c08525d77c4b2f83fc5f9d
     console.log(bucketActivity1);
     localStorage.setItem("Bucket List 1", JSON.stringify (bucketActivity1.val()));
    
@@ -169,3 +126,4 @@ function getApi(event) {
 //     }
 // });
 
+window.initMap = initMap;
