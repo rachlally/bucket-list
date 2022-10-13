@@ -1,20 +1,52 @@
+//Global Variables
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
    
-$("#firstActivity").on("click", function () {
-    var bucketActivity1 = $("#freeform");
+var saveBucketButton1 = $('#bucketButton1');
+var saveBucketButton2 = $('#bucketButton2');
+var saveBucketButton3 = $('#bucketButton3');
+var saveBucketButton4 = $('#bucketButton4');
+
+
+//Save activity input from user, on click, to local storage:
+saveBucketButton1.on("click", function () {
+    var bucketActivity1 = $("#freeform1");
     console.log(bucketActivity1);
-    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+    localStorage.setItem("Bucket List 1", JSON.stringify (bucketActivity1.val()));
+   
 })
 
-$("#secondActivity").on("click", function () {
-    var bucketActivity1 = $("#2");
-    console.log(bucketActivity1);
-    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+saveBucketButton2.on("click", function () {
+    var bucketActivity2 = $("#freeform2");
+    console.log(bucketActivity2);
+    localStorage.setItem("Bucket List 2", JSON.stringify (bucketActivity2.val()));
+   
 })
 
+saveBucketButton3.on("click", function () {
+    var bucketActivity3 = $("#freeform3");
+    console.log(bucketActivity3);
+    localStorage.setItem("Bucket List 3", JSON.stringify (bucketActivity3.val()));
+   
+})
 
+saveBucketButton4.on("click", function () {
+    var bucketActivity4 = $("#freeform4");
+    console.log(bucketActivity4);
+    localStorage.setItem("Bucket List 4", JSON.stringify (bucketActivity4.val()));
+   
+})
 
+//Render saved activity to page upon refresh
+function inIt () {
+    $("#freeform").val(JSON.parse(localStorage.getItem("Bucket List")));
+    $("#freeform2").val(JSON.parse(localStorage.getItem("Bucket List 2")));
+    $("#freeform3").val(JSON.parse(localStorage.getItem("Bucket List 3")));
+    $("#freeform4").val(JSON.parse(localStorage.getItem("Bucket List 4")));
+}
+inIt()
+
+//Bored API Fetch function
 function getApi(event) {
     
      console.log(activity.value)
@@ -31,6 +63,7 @@ function getApi(event) {
      })
  }
  getApi()
+ //button to generate event
  btn.addEventListener("click", getApi)
  
  
