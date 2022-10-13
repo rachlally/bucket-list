@@ -7,6 +7,22 @@ var saveBucketButton2 = $('#bucketButton2');
 var saveBucketButton3 = $('#bucketButton3');
 var saveBucketButton4 = $('#bucketButton4');
 
+// Google Maps APi
+//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+function initMap(){
+    const seattle = { lat:47.608, lng:-122.335};
+    const map = new google.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: seattle,
+    });
+}
+
+const marker = new google.maps.Marker({
+    position: seattle,
+    map: map,
+});
+
+
 
 //Save activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
@@ -123,3 +139,4 @@ function getApi(event) {
 //     }
 // });
 
+window.initMap = initMap;

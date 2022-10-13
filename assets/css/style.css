@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+#map {
+    height: 80vh;
+   width: 100%;
+}
+
 article {
   padding: 5%;
     background-color: rgb(107, 39, 233);
@@ -27,6 +33,7 @@ nav {
   h1 {
     padding-top: 5%;
 }
+
 
 img{
     width: 50%;
