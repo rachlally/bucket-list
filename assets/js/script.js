@@ -1,20 +1,42 @@
 var btn = document.getElementById("btn")
 var activity = document.getElementById("activity")
    
-$("#firstActivity").on("click", function () {
+var savedBucketItem = $('#firstActivityButton');
+var activityHistory = [];
+//Save activity input from user to local storage
+
+
+
+savedBucketItem.on("click", function () {
     var bucketActivity1 = $("#freeform");
     console.log(bucketActivity1);
     localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+    //savedActivities();
 })
 
-$("#secondActivity").on("click", function () {
-    var bucketActivity1 = $("#2");
-    console.log(bucketActivity1);
-    localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
-})
+function inIt () {
+    $("#freeform").val(JSON.parse(localStorage.getItem("Bucket List")));
+}
+inIt()
+
+// function savedActivities(saved){
+//     if (activityHistory.indexOf(saved) !== -1){
+//         return;
+//     }
+//     activityHistory.push(input);
+//     localStorage.setItem("Bucket List", JSON.stringify (bucketActivity1.val()));
+
+// }
 
 
+// $("#secondActivityButton").on("click", function () {
+//     var bucketActivity2 = $("#freeform");
+//     console.log(bucketActivity2);
+//     localStorage.setItem("Bucket List 2", JSON.stringify (bucketActivity2.val()));
+// })
 
+
+//Bored API Fetch function
 function getApi(event) {
     
      console.log(activity.value)
@@ -31,6 +53,7 @@ function getApi(event) {
      })
  }
  getApi()
+ //button to generate event
  btn.addEventListener("click", getApi)
  
  
