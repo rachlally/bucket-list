@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +41,7 @@
   <div class="column1">
     <div class="row">
   <div id="title-card">
-    <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
+    <textarea id="title1" name="title1" placeholder="Title Your Adventure here!"></textarea>
     </div>
 <div id="list">
     <img src="assets/images/basic image.png">
@@ -56,7 +58,7 @@
 <div class="column1">
   <div class="row">
 <div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
+  <textarea id="title2" name="title2" placeholder="Title Your Adventure here!"></textarea>
   </div>
 <div id="list">
   <img src="assets/images/basic image.png">
@@ -64,7 +66,7 @@
     
     </label> 
 </div>
-<textarea id="freeform2" name="freeform2" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
+<textarea id="freeform2" name="freeform2" rows="4" cols="50" placeholder='Write about your adventure here, so you can remember it later!'></textarea>
 <br/>
 <a class="waves-effect waves-light btn" id="bucketButton2">save it!</a>
 </div>
@@ -73,14 +75,14 @@
 <div class="column1">
   <div class="row">
 <div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
+  <textarea id="title3" name="title3" placeholder="Title Your Adventure here!"></textarea>
   </div>
 <div id="list">
   <img src="assets/images/basic image.png">
     <label for="freeform3">
     </label> 
 </div>
-<textarea id="freeform3" name="freeform3" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
+<textarea id="freeform3" name="freeform3" rows="4" cols="50" placeholder='Write about your adventure here, so you can remember it later!'></textarea>
 <br/>
 <a class="waves-effect waves-light btn" id="bucketButton3">save it!</a>
 </div>
@@ -89,13 +91,13 @@
 <div class="column1">
   <div class="row">
 <div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
+  <textarea id="title4" name="title4" placeholder="Title Your Adventure here!"></textarea>
   </div>
 <div id="list">
   <img src="assets/images/basic image.png">
     <label for="freeform4"></label> 
 </div>
-<textarea id="freeform4" name="freeform4" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
+<textarea id="freeform4" name="freeform4" rows="4" cols="50" placeholder='Write about your adventure here, so you can remember it later!'></textarea>
 <br/>
 <a class="waves-effect waves-light btn" id="bucketButton4">save it!</a>
 </div>
@@ -103,7 +105,15 @@
 
 </article>          
 
-<summary>
+<div class="google map div">
+
+  <h6> Google Maps </h6>
+  <div id="container"></div>
+  <div id="map"></div>
+
+</div>
+
+
 <div id="about">
   <h1>About Us</h1>
 
@@ -182,6 +192,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script> -->
 </body>
 <footer class="page-footer">
   <div class="nav-wrapper">

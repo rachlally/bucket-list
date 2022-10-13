@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+
+#map {
+    height: 80vh;
+   width: 100%;
+}
+
 article {
   padding: 5%;
     background-color: rgb(107, 39, 233);
@@ -28,6 +34,7 @@ nav {
     padding-top: 5%;
 }
 
+
 img{
     width: 50%;
     height: 50%;
@@ -51,7 +58,7 @@ blockquote{
     margin: 25px;
 }
 .container {
-    /*margin: 0px;*/
+    margin: 0px;
     padding: 0;
     text-align: center;
     font-weight: bolder;
@@ -60,7 +67,7 @@ blockquote{
     max-width: fit-content;
     
 }
-  #title {
+  #title1 {
     width: 25%;
     display: flexbox;
     height: 110px;
@@ -71,6 +78,42 @@ blockquote{
     
     color: black;
   }
+  #title2 {
+    width: 25%;
+    display: flexbox;
+    height: 110px;
+    width: 200px;
+    border: none;
+    font-weight: bolder;
+    font-size: 30px;
+    
+    color: black;
+  }
+
+  #title3 {
+    width: 25%;
+    display: flexbox;
+    height: 110px;
+    width: 200px;
+    border: none;
+    font-weight: bolder;
+    font-size: 30px;
+    
+    color: black;
+  }
+
+  #title4 {
+    width: 25%;
+    display: flexbox;
+    height: 110px;
+    width: 200px;
+    border: none;
+    font-weight: bolder;
+    font-size: 30px;
+    
+    color: black;
+  }
+
   label {
     font-size: 15px;
   }
