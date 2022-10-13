@@ -125,7 +125,6 @@ blockquote{
 
 
   nav {
-    position: sticky;
     top: 0;
     width: 100%;
     background-image: linear-gradient(violet, blue);
@@ -143,7 +142,7 @@ blockquote{
   footer {
     top: 0;
     width: 100%;
-    background-image: linear-gradient(blue, violet);
+    background-image: linear-gradient(violet, blue);
   }
 
 #result{
@@ -160,6 +159,32 @@ blockquote{
     position: fixed;
     top: 0;
     width: 100%;
-
   }
+
+summary {
+  background-image: linear-gradient(white, blue);
+  margin: 0;
+  color: white;
+  border-left: 0;
+}
+.column {
+  width: 25%;
+  float: left;
+  padding: 5px;
+}
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.card-content{
+  color: black;
+}
+.card {
+  background: none;
+  float: left;
+  padding: 5px;
+  border: none;
+}
+
 
