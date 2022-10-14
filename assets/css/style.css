@@ -2,19 +2,41 @@
     margin: 0;
     padding: 0;
 }
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 #map {
-    height: 80vh;
+
+  height: 50vh;
    width: 100%;
 }
 
-article {
-    padding: 2%;
-    background-color: rgb(107, 39, 233);
-    background-image: linear-gradient(rgb(70, 70, 146), rgb(49, 122, 158))
+nav {
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(violet, blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+summary {
+  padding: 2%;
+  background-image: linear-gradient(blue, white);
+  margin: 0;
+  color: white;
+  
 }
+
 h1 {
-    padding-top: 20px;
+    padding-top: 5%;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -26,39 +48,81 @@ h4 {
     color: white;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
+aside {
+background-image: linear-gradient(white, blue);
 }
 
-  h1 {
-    padding-top: 5%;
+article {
+    padding: 2%;
+    background-image: linear-gradient(blue, white)
 }
-
 
 img{
     width: 50%;
     height: 50%;
     border-radius: 50px;
 }
+
 label {
     color: black;
     font-weight: bolder;
+}
+
+section {
+  align-items: baseline;
+}
+
+.column2 {
+  width: 33.33%;
+  float: left;
+  padding: 5px;
+  color: black;
+}
+.row2::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card2 {
+  margin: 15px;
+  padding: 5px;
+  width: 20vw;
+  background: none;
+  float: left;
+  padding: 5px;
+}
+
+#activity {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
 }
 blockquote{
     /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
+    align-items: right;
 }
+
 .btn {
-    text-align: center;
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
     margin: 25px;
+    
 }
+
+h5 {
+  font-weight: bolder;
+}
+
+#bucket-list {
+  color: black;
+}
+
 .container {
     text-align: center;
     font-weight: bold;
@@ -67,75 +131,35 @@ blockquote{
     width: 100%;    
 }
 
-#activity {
-  color: teal;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-}
-
 .card {
   margin: 15px;
   padding: 5px;
   width: 20vw;
+  background: none;
+  float: left;
+  padding: 5px;
+  border: none;
 }
 
-ul #bucket-list {
-  list-style-type: none;
-  padding: 0;
-  background-color: purple;
-}
-
-  #title1 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    
-    color: black;
-  }
-  #title2 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    
-    color: black;
-  }
-
-  #title3 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    
-    color: black;
-  }
-
-  #title4 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    
-    color: black;
+#title1,
+#title2,
+#title3,
+#title4 {
+   width: 25%;
+   display: flexbox;
+   height: 110px;
+   width: 200px;
+   border: none;
+   font-weight: bolder;
+   font-size: 30px;
+   color: black;
   }
 
   label {
     font-size: 15px;
   }
+
+
 #freeform1 {
     width: 50%;
     height: 100px;
@@ -150,6 +174,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform2 {
     width: 50%;
     height: 100px;
@@ -164,6 +189,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform3 {
     width: 50%;
     height: 100px;
@@ -178,6 +204,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform4 {
     width: 50%;
     height: 100px;
@@ -193,26 +220,10 @@ ul #bucket-list {
     color: black;
   }
 
-
-  nav {
-    top: 0;
-    width: 100%;
-    background-image: linear-gradient(violet, blue);
-  }
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
   footer {
     top: 0;
     width: 100%;
-    background-image: linear-gradient(violet, blue);
+    background-image: linear-gradient(blue, violet);
   }
 
 #result{
@@ -225,18 +236,6 @@ ul #bucket-list {
     height: 192px;
 }
 
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-summary {
-  background-image: linear-gradient(white, blue);
-  margin: 0;
-  color: white;
-  border-left: 0;
-}
 .column {
   width: 25%;
   float: left;
@@ -255,11 +254,15 @@ summary {
 .card-content{
   color: black;
 }
-.card {
-  background: none;
-  float: left;
-  padding: 5px;
-  border: none;
+
+base {
+  padding: 2%;
+  background-image: linear-gradient(white, blue);
+  margin: 0;
+  color: white;
+  
 }
+
+
 
 
