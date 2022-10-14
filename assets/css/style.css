@@ -9,19 +9,21 @@
 }
 
 article {
-  padding: 5%;
+    padding: 2%;
     background-color: rgb(107, 39, 233);
-    background-image: linear-gradient(blue, white)
+    background-image: linear-gradient(rgb(70, 70, 146), rgb(49, 122, 158))
 }
 h1 {
     padding-top: 20px;
     font-size: 40px;
     font-weight: bold;
+    color: white;
 }
 
 h4 {
     padding: 0;
     font-size: 20px;
+    color: white;
 }
 
 nav {
@@ -45,28 +47,45 @@ label {
     font-weight: bolder;
 }
 blockquote{
-    background-image: linear-gradient(white, blue);
+    /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
 }
 .btn {
-    /*text-align: left;*/
+    text-align: center;
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
     margin: 25px;
 }
 .container {
-    margin: 0px;
-    padding: 0;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 25px;
-    justify-content: relative;
-    max-width: fit-content;
-    
+    justify-content: center;
+    width: 100%;    
 }
+
+#activity {
+  color: teal;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.card {
+  margin: 15px;
+  padding: 5px;
+  width: 20vw;
+}
+
+ul #bucket-list {
+  list-style-type: none;
+  padding: 0;
+  background-color: purple;
+}
+
   #title1 {
     width: 25%;
     display: flexbox;

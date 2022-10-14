@@ -1,14 +1,59 @@
 //Global Variables
-var btn = document.getElementById("btn")
-var activity = document.getElementById("activity")
+var btn = document.getElementById("btn");
+var activity = document.getElementById("activity");
+
+var bucketInput = document.querySelector("#bucket-input");
+var bucketForm = document.querySelector("#bucket-list-form");
+var bucketList = document.querySelector("#bucket-list");
+
+var bucket = [];
    
 var saveBucketButton1 = $('#bucketButton1');
 var saveBucketButton2 = $('#bucketButton2');
 var saveBucketButton3 = $('#bucketButton3');
 var saveBucketButton4 = $('#bucketButton4');
 
+<<<<<<< HEAD
+//Function to render new Bucket List Items to the page
+function renderBucket(){
+    bucketList.innerHTML = "";
+    
+    for(var i=0; i < bucket.length; i++) {
+        var item = bucket[i];
+        var li = document.createElement("li");
+        li.textContent = item;
+        li.setAttribute("data-index", i);
+
+        var button = document.createElement("button");
+        button.textContent = "I did it!";
+
+        li.appendChild(button);
+        bucketList.appendChild(li);
+    }
+}
+
+function saveBucket (){
+    localStorage.setItem("Bucket Ideas", JSON.stringify(bucket));
+}
+
+bucketForm.addEventListener("submit", function (event){
+    event.preventDefault();
+
+    var bucketText = bucketInput.value.trim();
+    if (bucketText === ""){
+        return;
+    }
+
+    bucket.push(bucketText);
+    bucketInput.value = "";
+
+    renderBucket();
+    saveBucket();
+})
+=======
 // Google Maps APi
 //AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+>>>>>>> dev
 
 // Initialize and add the map
 // function initMap() {
@@ -77,7 +122,6 @@ function inIt () {
     $("#title3").val(JSON.parse(localStorage.getItem("Bucket List Title 3")));
     $("#title4").val(JSON.parse(localStorage.getItem("Bucket List Title 4")));
 }
-
 inIt()
 
 //Bored API Fetch function
@@ -97,7 +141,7 @@ function getApi(event) {
      })
  }
  getApi()
- //button to generate event
+ //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
  
@@ -144,4 +188,21 @@ function getApi(event) {
 //     }
 // });
 
-window.initMap = initMap;
+
+// Google Maps APi
+//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+// function initMap(){
+//     const seattle = { lat:47.608, lng:-122.335};
+//     const map = new google.Map(document.getElementById("map"),{
+//         zoom: 4,
+//         center: seattle,
+//     });
+// }
+
+// const marker = new google.maps.Marker({
+//     position: seattle,
+//     map: map,
+// });
+
+
+// window.initMap = initMap;
