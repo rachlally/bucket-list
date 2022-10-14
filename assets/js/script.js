@@ -75,27 +75,6 @@ bucketList.addEventListener("click", function(event){
     }
 })
 
-// Google Maps APi
-// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
-    });
-function initMap() {}
-$(()=> {
-    initMap = function(){
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat:47.602 , lon:-122.335}
-            
-        })
-    }
-})
-
 //Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
@@ -168,29 +147,6 @@ function getApi(event) {
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
- 
-// document.querySelector("#files").addEventListener("change", (e) => {
-//     if(window.File && window.FileReader && window.FileList && window.Blob){
-//         const files = e.target.files;
-//         const output = document.querySelector("#result");
-
-//         for (let i= 0; i < files.length; i++){
-//             if(!files[i].type.match("image")) continue;
-//             const picReader = new FileReader();
-//             picReader.addEventListener("load", function(event){
-//                 const picFile = event.target;
-//                 const div = document.createElement("div");
-//                 div.innerHTML = '<img class="thumbnail" src="$(picFile.result)" + title="(picFile.name)"/>';
-//                 output.appendChild(div);
-//             });
-//             picReader.readAsDataURL(files[i]);
-//         }
-
-//     } else {
-//         alert("Your browser does not support the File API")
-//     }
-// });
-
 
 // Google Maps APi
 // AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI

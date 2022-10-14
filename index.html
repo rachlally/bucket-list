@@ -2,11 +2,6 @@
 <html lang="en">
 
 <head>
-
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
-
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -264,11 +259,19 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 47.608013, lng: -122.335167 },
-      zoom: 8,
+  const myLatLng = { lat: 47.608013, lng: -122.335167};
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: myLatLng,
   });
-} </script>
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}
+</script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
 <script src="assets/js/script.js"></script>
 </body>
