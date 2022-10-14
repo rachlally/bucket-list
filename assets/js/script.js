@@ -67,6 +67,7 @@ bucketForm.addEventListener("submit", function (event){
 // AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
 
 // Initialize and add the map
+<<<<<<< HEAD
 function initMap() {
     // The location of Uluru
     const uluru = { lat: -25.344, lng: 131.031 };
@@ -84,6 +85,32 @@ $(()=> {
         })
     }
 })
+=======
+// function initMap() {
+//     // The location of Uluru
+//     const uluru = { lat: -25.344, lng: 131.031 };
+//     // The map, centered at Uluru
+//     const map = new google.maps.Map(document.getElementById("map"), {
+//       zoom: 4,
+//       center: uluru,
+//     });
+// function initMap() {}
+// $(()=> {
+//     initMap = function(){
+//         const uluru = { lat:parseFloat(47.608013),lon:parseFloat(-122.335167)};
+//         console.log(uluru)
+//         var map = new google.maps.Map(document.getElementById('map'), {
+//             zoom : 4, 
+//             center: uluru
+  
+//         })
+//         const marker = new google.maps.Marker({
+//             position: uluru,
+//             map: map,
+//           });
+//     }
+// })
+>>>>>>> dev
 
 //Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
@@ -140,15 +167,14 @@ bucketInIt()
 
 //Bored API Fetch function
 function getApi(event) {
-    
-     console.log(activity.value)
+    event.preventDefault()
+    //  console.log(activity.value)
      var requestUrl = 'https://www.boredapi.com/api/activity';
      fetch(requestUrl)
          .then(function(response) {
          return response.json();
      })
      .then(function(data) {
-        event.preventDefault()
          console.log(data)
          activity.textContent = data.activity
          
