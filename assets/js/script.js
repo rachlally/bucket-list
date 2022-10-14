@@ -13,7 +13,6 @@ var saveBucketButton2 = $('#bucketButton2');
 var saveBucketButton3 = $('#bucketButton3');
 var saveBucketButton4 = $('#bucketButton4');
 
-<<<<<<< HEAD
 //Function to render new Bucket List Items to the page
 function renderBucket(){
     bucketList.innerHTML = "";
@@ -32,10 +31,22 @@ function renderBucket(){
     }
 }
 
+//save bucket list items to local storage
 function saveBucket (){
     localStorage.setItem("Bucket Ideas", JSON.stringify(bucket));
 }
 
+//retrieves bucket item from storage, renders to page
+function bucketInIt (){
+
+    var savedBucketItems = JSON.parse(localStorage.getItem("Bucket Ideas"));
+    if(savedBucketItems !== null){
+        bucket = savedBucketItems;
+    }
+    renderBucket();
+}
+
+//user presses enter, bucket item saved to list
 bucketForm.addEventListener("submit", function (event){
     event.preventDefault();
 
@@ -49,13 +60,32 @@ bucketForm.addEventListener("submit", function (event){
 
     renderBucket();
     saveBucket();
+    
 })
-=======
+
 // Google Maps APi
-//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
->>>>>>> dev
+// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
 
 // Initialize and add the map
+<<<<<<< HEAD
+function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.031 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+function initMap() {}
+$(()=> {
+    initMap = function(){
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat:47.602 , lon:-122.335}
+            
+        })
+    }
+})
+=======
 // function initMap() {
 //     // The location of Uluru
 //     const uluru = { lat: -25.344, lng: 131.031 };
@@ -80,8 +110,9 @@ bucketForm.addEventListener("submit", function (event){
 //           });
 //     }
 // })
+>>>>>>> dev
 
-//Save activity input from user, on click, to local storage:
+//Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
     var bucketTitle1 = $("#title1");
@@ -129,7 +160,10 @@ function inIt () {
     $("#title3").val(JSON.parse(localStorage.getItem("Bucket List Title 3")));
     $("#title4").val(JSON.parse(localStorage.getItem("Bucket List Title 4")));
 }
+
+//functions to keep storage on page after refresh:
 inIt()
+bucketInIt()
 
 //Bored API Fetch function
 function getApi(event) {
@@ -151,27 +185,6 @@ function getApi(event) {
  btn.addEventListener("click", getApi)
  
  
-// const options = {
-//       method: 'GET',
-//       headers: {
-//           'X-RapidAPI-Key': 'ec9e8aa11bmsh01afb5356f556dep1d5473jsn3185f0830ed0',
-//           'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
-//       }
-//   };
- 
-//   var locationString = "The Showbox";
- 
-//   fetch("https://trueway-places.p.rapidapi.com/FindPlaceByText?text=" + locationString + "&language=en", options)
-//       .then(function(response) {
-//       return response.json();
- 
-//   })
-//       .then(function(data) {
-//       console.log(data)
-//       console.log(data.results[0].name);
-//       console.log(data.results[0].website);
-//   })
-
 // document.querySelector("#files").addEventListener("change", (e) => {
 //     if(window.File && window.FileReader && window.FileList && window.Blob){
 //         const files = e.target.files;
@@ -196,19 +209,19 @@ function getApi(event) {
 
 
 // Google Maps APi
-//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-// function initMap(){
-//     const seattle = { lat:47.608, lng:-122.335};
-//     const map = new google.Map(document.getElementById("map"),{
-//         zoom: 4,
-//         center: seattle,
-//     });
-// }
+// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+function initMap(){
+    const seattle = { lat:47.608, lng:-122.335};
+    const map = new google.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: seattle,
+    });
+}
 
-// const marker = new google.maps.Marker({
-//     position: seattle,
-//     map: map,
-// });
+const marker = new google.maps.Marker({
+    position: seattle,
+    map: map,
+});
 
 
-// window.initMap = initMap;
+window.initMap = initMap;
