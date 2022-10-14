@@ -1,6 +1,12 @@
 //Global Variables
-var btn = document.getElementById("btn")
-var activity = document.getElementById("activity")
+var btn = document.getElementById("btn");
+var activity = document.getElementById("activity");
+
+var bucketInput = document.querySelector("#bucket-input");
+var bucketForm = document.querySelector("#bucket-list-form");
+var bucketList = document.querySelector("#bucket-list");
+
+var bucket = [];
    
 var saveBucketButton1 = $('#bucketButton1');
 var saveBucketButton2 = $('#bucketButton2');
@@ -22,10 +28,17 @@ var saveBucketButton4 = $('#bucketButton4');
 // function initMap() {}
 // $(()=> {
 //     initMap = function(){
+//         const uluru = { lat:parseFloat(47.608013),lon:parseFloat(-122.335167)};
+//         console.log(uluru)
 //         var map = new google.maps.Map(document.getElementById('map'), {
-//             center: {lat:47.602 , lon:-122.335}
-            
+//             zoom : 4, 
+//             center: uluru
+  
 //         })
+//         const marker = new google.maps.Marker({
+//             position: uluru,
+//             map: map,
+//           });
 //     }
 // })
 
@@ -77,27 +90,25 @@ function inIt () {
     $("#title3").val(JSON.parse(localStorage.getItem("Bucket List Title 3")));
     $("#title4").val(JSON.parse(localStorage.getItem("Bucket List Title 4")));
 }
-
 inIt()
 
 //Bored API Fetch function
 function getApi(event) {
-    
-     console.log(activity.value)
+    event.preventDefault()
+    //  console.log(activity.value)
      var requestUrl = 'https://www.boredapi.com/api/activity';
      fetch(requestUrl)
          .then(function(response) {
          return response.json();
      })
      .then(function(data) {
-        event.preventDefault()
          console.log(data)
          activity.textContent = data.activity
          
      })
  }
  getApi()
- //button to generate event
+ //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
  
@@ -144,4 +155,21 @@ function getApi(event) {
 //     }
 // });
 
-//window.initMap = initMap;
+
+// Google Maps APi
+//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+// function initMap(){
+//     const seattle = { lat:47.608, lng:-122.335};
+//     const map = new google.Map(document.getElementById("map"),{
+//         zoom: 4,
+//         center: seattle,
+//     });
+// }
+
+// const marker = new google.maps.Marker({
+//     position: seattle,
+//     map: map,
+// });
+
+
+// window.initMap = initMap;
