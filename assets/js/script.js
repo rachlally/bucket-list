@@ -13,6 +13,69 @@ var saveBucketButton2 = $('#bucketButton2');
 var saveBucketButton3 = $('#bucketButton3');
 var saveBucketButton4 = $('#bucketButton4');
 
+//Function to render new Bucket List Items to the page
+function renderBucket(){
+    bucketList.innerHTML = "";
+    
+    for(var i=0; i < bucket.length; i++) {
+        var item = bucket[i];
+        var li = document.createElement("li");
+        li.textContent = item;
+        li.setAttribute("data-index", i);
+
+        var button = document.createElement("button");
+        button.textContent = "I did it!";
+
+        li.appendChild(button);
+        bucketList.appendChild(li);
+    }
+}
+
+//save bucket list items to local storage
+function saveBucket (){
+    localStorage.setItem("Bucket Ideas", JSON.stringify(bucket));
+}
+
+//retrieves bucket item from storage, renders to page
+function bucketInIt (){
+
+    var savedBucketItems = JSON.parse(localStorage.getItem("Bucket Ideas"));
+    if(savedBucketItems !== null){
+        bucket = savedBucketItems;
+    }
+    renderBucket();
+}
+
+//user presses enter, bucket item saved to list
+bucketForm.addEventListener("submit", function (event){
+    event.preventDefault();
+
+    var bucketText = bucketInput.value.trim();
+    if (bucketText === ""){
+        return;
+    }
+
+    bucket.push(bucketText);
+    bucketInput.value = "";
+
+    renderBucket();
+    saveBucket();
+    
+})
+
+//click event on bucket list items to finish task
+bucketList.addEventListener("click", function(event){
+    var complete = event.target;
+    if (complete.matches("button") === true) {
+        var index = complete.parentElement.getAttribute("data-index");
+        bucket.splice(index, 1);
+
+        saveBucket();
+        renderBucket();
+    }
+})
+
+//Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
     var bucketTitle1 = $("#title1");
@@ -60,7 +123,10 @@ function inIt () {
     $("#title3").val(JSON.parse(localStorage.getItem("Bucket List Title 3")));
     $("#title4").val(JSON.parse(localStorage.getItem("Bucket List Title 4")));
 }
+
+//functions to keep storage on page after refresh:
 inIt()
+bucketInIt()
 
 //Bored API Fetch function
 function getApi(event) {
@@ -80,3 +146,27 @@ function getApi(event) {
  getApi()
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
+ 
+ 
+// document.querySelector("#files").addEventListener("change", (e) => {
+//     if(window.File && window.FileReader && window.FileList && window.Blob){
+//         const files = e.target.files;
+//         const output = document.querySelector("#result");
+
+//         for (let i= 0; i < files.length; i++){
+//             if(!files[i].type.match("image")) continue;
+//             const picReader = new FileReader();
+//             picReader.addEventListener("load", function(event){
+//                 const picFile = event.target;
+//                 const div = document.createElement("div");
+//                 div.innerHTML = '<img class="thumbnail" src="$(picFile.result)" + title="(picFile.name)"/>';
+//                 output.appendChild(div);
+//             });
+//             picReader.readAsDataURL(files[i]);
+//         }
+
+//     } else {
+//         alert("Your browser does not support the File API")
+//     }
+// });
+
