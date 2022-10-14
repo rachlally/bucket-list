@@ -75,27 +75,6 @@ bucketList.addEventListener("click", function(event){
     }
 })
 
-// Google Maps APi
-// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
-    });
-function initMap() {}
-$(()=> {
-    initMap = function(){
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat:47.602 , lon:-122.335}
-            
-        })
-    }
-})
-
 //Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
@@ -191,21 +170,3 @@ function getApi(event) {
 //     }
 // });
 
-
-// Google Maps APi
-// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-function initMap(){
-    const seattle = { lat:47.608, lng:-122.335};
-    const map = new google.Map(document.getElementById("map"),{
-        zoom: 4,
-        center: seattle,
-    });
-}
-
-const marker = new google.maps.Marker({
-    position: seattle,
-    map: map,
-});
-
-
-window.initMap = initMap();}
