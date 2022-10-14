@@ -164,7 +164,7 @@ function getApi(event) {
          
      })
  }
- getApi()
+ //getApi()
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  

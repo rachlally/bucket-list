@@ -17,11 +17,6 @@
    width: 100%;
 }
 
-.map {
-  width: 25%;
-   
-}
-
 nav {
     top: 0;
     width: 100%;
@@ -39,20 +34,6 @@ summary {
   
 }
 
-aside {
-background-image: linear-gradient(white, blue);
-margin: 0;
-color: white;
-border-left: 0;
-}
-
-article {
-    padding: 2%;
-    background-color: rgb(107, 39, 233);
-    background-image: linear-gradient(rgb(70, 70, 146), rgb(229, 242, 248))
-}
-
-
 h1 {
     padding-top: 5%;
     font-size: 40px;
@@ -66,6 +47,15 @@ h4 {
     color: white;
 }
 
+aside {
+background-image: linear-gradient(white, blue);
+}
+
+article {
+    padding: 2%;
+    background-image: linear-gradient(blue, white)
+}
+
 img{
     width: 50%;
     height: 50%;
@@ -77,19 +67,59 @@ label {
     font-weight: bolder;
 }
 
+section {
+  align-items: baseline;
+}
+
+.column2 {
+  width: 33.33%;
+  float: left;
+  padding: 5px;
+  color: black;
+}
+.row2::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card2 {
+  margin: 15px;
+  padding: 5px;
+  width: 20vw;
+  background: none;
+  float: left;
+  padding: 5px;
+}
+
+#activity {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
+}
 blockquote{
     /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
+    align-items: right;
 }
 
 .btn {
-    text-align: center;
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
     margin: 25px;
+    
+}
+
+h5 {
+  font-weight: bolder;
+}
+
+#bucket-list {
+  color: black;
 }
 
 .container {
@@ -100,23 +130,14 @@ blockquote{
     width: 100%;    
 }
 
-#activity {
-  color: teal;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-}
-
 .card {
   margin: 15px;
   padding: 5px;
   width: 20vw;
-}
-
-ul #bucket-list {
-  list-style-type: none;
-  padding: 0;
-  background-color: purple;
+  background: none;
+  float: left;
+  padding: 5px;
+  border: none;
 }
 
 #title1,
@@ -136,6 +157,7 @@ ul #bucket-list {
   label {
     font-size: 15px;
   }
+
 
 #freeform1 {
     width: 50%;
@@ -197,12 +219,10 @@ ul #bucket-list {
     color: black;
   }
 
- 
-
   footer {
     top: 0;
     width: 100%;
-    background-image: linear-gradient(violet, blue);
+    background-image: linear-gradient(blue, violet);
   }
 
 #result{
@@ -214,9 +234,6 @@ ul #bucket-list {
 .thumbnail{
     height: 192px;
 }
-
-
-
 
 .column {
   width: 25%;
@@ -236,12 +253,15 @@ ul #bucket-list {
 .card-content{
   color: black;
 }
-.card {
-  background: none;
-  float: left;
-  padding: 5px;
-  border: none;
+
+base {
+  padding: 2%;
+  background-image: linear-gradient(white, blue);
+  margin: 0;
+  color: white;
+  
 }
+
 
 
 
