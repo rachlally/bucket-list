@@ -4,14 +4,23 @@
 }
 
 #map {
-    height: 80vh;
+    height: 50vh;
    width: 100%;
+}
+
+.map {
+  width: 25%;
 }
 
 article {
     padding: 2%;
     background-color: rgb(107, 39, 233);
-    background-image: linear-gradient(rgb(70, 70, 146), rgb(49, 122, 158))
+    background-image: linear-gradient(rgb(70, 70, 146), rgb(229, 242, 248))
+}
+
+summary {
+  padding: 2%;
+ 
 }
 h1 {
     padding-top: 20px;
@@ -94,7 +103,6 @@ ul #bucket-list {
     border: none;
     font-weight: bolder;
     font-size: 30px;
-    
     color: black;
   }
   #title2 {
@@ -105,7 +113,6 @@ ul #bucket-list {
     border: none;
     font-weight: bolder;
     font-size: 30px;
-    
     color: black;
   }
 
@@ -117,7 +124,6 @@ ul #bucket-list {
     border: none;
     font-weight: bolder;
     font-size: 30px;
-    
     color: black;
   }
 
@@ -129,7 +135,6 @@ ul #bucket-list {
     border: none;
     font-weight: bolder;
     font-size: 30px;
-    
     color: black;
   }
 
@@ -230,6 +235,12 @@ ul #bucket-list {
     top: 0;
     width: 100%;
   }
+  aside {
+    background-image: linear-gradient(white, blue);
+  margin: 0;
+  color: white;
+  border-left: 0;
+  }
 
 summary {
   background-image: linear-gradient(white, blue);
@@ -261,5 +272,6 @@ summary {
   padding: 5px;
   border: none;
 }
+
 
 
