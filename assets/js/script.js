@@ -19,15 +19,15 @@ var saveBucketButton4 = $('#bucketButton4');
 //       zoom: 4,
 //       center: uluru,
 //     });
-function initMap() {}
-$(()=> {
-    initMap = function(){
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat:47.602 , lon:-122.335}
+// function initMap() {}
+// $(()=> {
+//     initMap = function(){
+//         var map = new google.maps.Map(document.getElementById('map'), {
+//             center: {lat:47.602 , lon:-122.335}
             
-        })
-    }
-})
+//         })
+//     }
+// })
 
 //Save activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
@@ -144,4 +144,4 @@ function getApi(event) {
 //     }
 // });
 
-window.initMap = initMap;
+//window.initMap = initMap;
