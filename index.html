@@ -190,10 +190,6 @@
 </div>
 </summary>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
-</body>
 <footer class="page-footer">
   <div class="nav-wrapper">
     <a href="#" class="brand-logo">Bucket List Scrapbook</a>
@@ -204,8 +200,18 @@
       
     </ul>
   </div>
-    © 2014 Copyright Text
-    </div>
-  </div>
+  © 2014 Copyright Text
+</div>
+</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 47.608013, lng: -122.335167 },
+      zoom: 8,
+  });
+} </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
