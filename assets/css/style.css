@@ -2,14 +2,48 @@
     margin: 0;
     padding: 0;
 }
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 #map {
-    height: 50vh;
+  height: 50vh;
    width: 100%;
 }
 
 .map {
   width: 25%;
+   
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(violet, blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+summary {
+  padding: 2%;
+  background-image: linear-gradient(blue, white);
+  margin: 0;
+  color: white;
+  
+}
+
+aside {
+background-image: linear-gradient(white, blue);
+margin: 0;
+color: white;
+border-left: 0;
 }
 
 article {
@@ -18,12 +52,9 @@ article {
     background-image: linear-gradient(rgb(70, 70, 146), rgb(229, 242, 248))
 }
 
-summary {
-  padding: 2%;
- 
-}
+
 h1 {
-    padding-top: 20px;
+    padding-top: 5%;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -35,32 +66,24 @@ h4 {
     color: white;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-  h1 {
-    padding-top: 5%;
-}
-
-
 img{
     width: 50%;
     height: 50%;
     border-radius: 50px;
 }
+
 label {
     color: black;
     font-weight: bolder;
 }
+
 blockquote{
     /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
 }
+
 .btn {
     text-align: center;
     font-weight: bolder;
@@ -68,6 +91,7 @@ blockquote{
     border-radius: 50px;
     margin: 25px;
 }
+
 .container {
     text-align: center;
     font-weight: bold;
@@ -95,52 +119,24 @@ ul #bucket-list {
   background-color: purple;
 }
 
-  #title1 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    color: black;
-  }
-  #title2 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    color: black;
-  }
-
-  #title3 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    color: black;
-  }
-
-  #title4 {
-    width: 25%;
-    display: flexbox;
-    height: 110px;
-    width: 200px;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
-    color: black;
+#title1,
+#title2,
+#title3,
+#title4 {
+   width: 25%;
+   display: flexbox;
+   height: 110px;
+   width: 200px;
+   border: none;
+   font-weight: bolder;
+   font-size: 30px;
+   color: black;
   }
 
   label {
     font-size: 15px;
   }
+
 #freeform1 {
     width: 50%;
     height: 100px;
@@ -155,6 +151,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform2 {
     width: 50%;
     height: 100px;
@@ -169,6 +166,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform3 {
     width: 50%;
     height: 100px;
@@ -183,6 +181,7 @@ ul #bucket-list {
     font-weight: bold;
     color: black;
   }
+
   #freeform4 {
     width: 50%;
     height: 100px;
@@ -198,21 +197,7 @@ ul #bucket-list {
     color: black;
   }
 
-
-  nav {
-    top: 0;
-    width: 100%;
-    background-image: linear-gradient(violet, blue);
-  }
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
+ 
 
   footer {
     top: 0;
@@ -230,24 +215,9 @@ ul #bucket-list {
     height: 192px;
 }
 
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  aside {
-    background-image: linear-gradient(white, blue);
-  margin: 0;
-  color: white;
-  border-left: 0;
-  }
 
-summary {
-  background-image: linear-gradient(white, blue);
-  margin: 0;
-  color: white;
-  border-left: 0;
-}
+
+
 .column {
   width: 25%;
   float: left;

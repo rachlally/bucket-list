@@ -13,8 +13,58 @@ var saveBucketButton2 = $('#bucketButton2');
 var saveBucketButton3 = $('#bucketButton3');
 var saveBucketButton4 = $('#bucketButton4');
 
+//Function to render new Bucket List Items to the page
+function renderBucket(){
+    bucketList.innerHTML = "";
+    
+    for(var i=0; i < bucket.length; i++) {
+        var item = bucket[i];
+        var li = document.createElement("li");
+        li.textContent = item;
+        li.setAttribute("data-index", i);
+
+        var button = document.createElement("button");
+        button.textContent = "I did it!";
+
+        li.appendChild(button);
+        bucketList.appendChild(li);
+    }
+}
+
+//save bucket list items to local storage
+function saveBucket (){
+    localStorage.setItem("Bucket Ideas", JSON.stringify(bucket));
+}
+
+//retrieves bucket item from storage, renders to page
+function bucketInIt (){
+
+    var savedBucketItems = JSON.parse(localStorage.getItem("Bucket Ideas"));
+    if(savedBucketItems !== null){
+        bucket = savedBucketItems;
+    }
+    renderBucket();
+}
+
+//user presses enter, bucket item saved to list
+bucketForm.addEventListener("submit", function (event){
+    event.preventDefault();
+
+    var bucketText = bucketInput.value.trim();
+    if (bucketText === ""){
+        return;
+    }
+
+    bucket.push(bucketText);
+    bucketInput.value = "";
+
+    renderBucket();
+    saveBucket();
+    
+})
+
 // Google Maps APi
-//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
 
 // Initialize and add the map
 // function initMap() {
@@ -42,7 +92,7 @@ var saveBucketButton4 = $('#bucketButton4');
 //     }
 // })
 
-//Save activity input from user, on click, to local storage:
+//Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
     var bucketTitle1 = $("#title1");
@@ -90,7 +140,10 @@ function inIt () {
     $("#title3").val(JSON.parse(localStorage.getItem("Bucket List Title 3")));
     $("#title4").val(JSON.parse(localStorage.getItem("Bucket List Title 4")));
 }
+
+//functions to keep storage on page after refresh:
 inIt()
+bucketInIt()
 
 //Bored API Fetch function
 function getApi(event) {
@@ -111,7 +164,7 @@ function getApi(event) {
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
-
+ 
 // document.querySelector("#files").addEventListener("change", (e) => {
 //     if(window.File && window.FileReader && window.FileList && window.Blob){
 //         const files = e.target.files;
@@ -136,19 +189,19 @@ function getApi(event) {
 
 
 // Google Maps APi
-//AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-// function initMap(){
-//     const seattle = { lat:47.608, lng:-122.335};
-//     const map = new google.Map(document.getElementById("map"),{
-//         zoom: 4,
-//         center: seattle,
-//     });
-// }
+// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+function initMap(){
+    const seattle = { lat:47.608, lng:-122.335};
+    const map = new google.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: seattle,
+    });
+}
 
-// const marker = new google.maps.Marker({
-//     position: seattle,
-//     map: map,
-// });
+const marker = new google.maps.Marker({
+    position: seattle,
+    map: map,
+});
 
 
-// window.initMap = initMap;
+window.initMap = initMap;
