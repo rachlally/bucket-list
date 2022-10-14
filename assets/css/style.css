@@ -5,7 +5,7 @@
 
 #map {
     height: 80vh;
-   width: 100%;
+   width: 25%;
 }
 
 article {
@@ -203,6 +203,7 @@ ul #bucket-list {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    bottom: 0%;
   }
 
   main {
@@ -225,7 +226,7 @@ ul #bucket-list {
     height: 192px;
 }
 
-  nav {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
