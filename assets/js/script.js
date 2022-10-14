@@ -143,30 +143,25 @@ function getApi(event) {
          
      })
  }
- getApi()
+ //getApi()
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
- 
-// document.querySelector("#files").addEventListener("change", (e) => {
-//     if(window.File && window.FileReader && window.FileList && window.Blob){
-//         const files = e.target.files;
-//         const output = document.querySelector("#result");
 
-//         for (let i= 0; i < files.length; i++){
-//             if(!files[i].type.match("image")) continue;
-//             const picReader = new FileReader();
-//             picReader.addEventListener("load", function(event){
-//                 const picFile = event.target;
-//                 const div = document.createElement("div");
-//                 div.innerHTML = '<img class="thumbnail" src="$(picFile.result)" + title="(picFile.name)"/>';
-//                 output.appendChild(div);
-//             });
-//             picReader.readAsDataURL(files[i]);
-//         }
+// Google Maps APi
+// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
+function initMap(){
+    const seattle = { lat:47.608, lng:-122.335};
+    const map = new google.Map(document.getElementById("map"),{
+        zoom: 4,
+        center: seattle,
+    });
+}
 
-//     } else {
-//         alert("Your browser does not support the File API")
-//     }
-// });
+const marker = new google.maps.Marker({
+    position: seattle,
+    map: map,
+});
 
+
+window.initMap = initMap();}
