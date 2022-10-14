@@ -1,188 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Linked css jquery & materialize -->
 <head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR BUCKET LIST 😊</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOUR BUCKET LIST 😊</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+
 <body>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Bucket List Scrapbook</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#what">What is Bucket List Scrapbook</a></li>
-        <li><a href="#list">Your Bucket List</a></li>
-        <li><a href="#about">About Us</a></li>
-      </ul>
+<!-- Navigation on page links -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Bucket List Scrapbook</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#what">What is Bucket List Scrapbook</a></li>
+          <li><a href="#list">Bucket List</a></li>
+          <li><a href="#scrapbook">Scrapbook</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+<!-- Description of Bucket List Scrapbook -->
+  <summary>
+    <div id="what">
+      <h1>What is Bucket List Scrapbook?</h1>
+      <h4>Bucket List Scrapbook is a place where you can brainstorm bucket list items, complete them and store photos of
+        your experiences! Bucket List Scrapbook is all about making memories by doing the things you've always wanted to
+        do and creating a diary entry for each list item. On our site you can even show the location of where you've
+        completed each Bucket List experience. If you're not sure of what to put on your bucket list, go ahead and click
+        the "FILL MY BUCKET" button below!</h4>
+      <br />
     </div>
-  </nav>
+  </summary>
+  
 
-<article>
-<div id="what">
-  <h1>What is Bucket List Scrapbook?</h1>
-  <h4>Bucket List Scrapbook is a place where you can brainstorm bucket list items, complete them and store photos of your experiences! Bucket List Scrapbook is all about making memories by doing the things you've always wanted to do and creating a diary entry for each list item. On our site you can even show the location of where you've completed each Bucket List experience. If you're not sure of what to put on your bucket list, go ahead and click the "FILL MY BUCKET" button below!</h4>
-  <br/>
-</div>
-</article>
+<aside>
+  <div class="column2">
+    <div class="row2">
+        <div class="card2">
 
-<blockquote class="justify center">
-  <button class="btn btn-outline-success" id="btn"  type="submit">FILL MY BUCKET</button>
-  <div class="container" id="activity"></div>
-</blockquote>
+<!-- Bucket List item generator -->
+  <section id="list">
+        <blockquote>
 
-<article>
-  <div class="column1">
-    <div class="row">
-  <div id="title-card">
-    <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
-    </div>
-<div id="list">
-    <img src="assets/images/basic image.png">
-      <label for="freeform1">
-     
-      </label> 
-</div>
-  <textarea id="freeform1" name="freeform1" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
-  <br/>
-  <a class="waves-effect waves-light btn" id="bucketButton1">save it!</a>
-</div>
-</div>
-
-<div class="column1">
-  <div class="row">
-<div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
-  </div>
-<div id="list">
-  <img src="assets/images/basic image.png">
-    <label for="freeform2">
-    
-    </label> 
-</div>
-<textarea id="freeform2" name="freeform2" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
-<br/>
-<a class="waves-effect waves-light btn" id="bucketButton2">save it!</a>
-</div>
-</div>
-
-<div class="column1">
-  <div class="row">
-<div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
-  </div>
-<div id="list">
-  <img src="assets/images/basic image.png">
-    <label for="freeform3">
-    </label> 
-</div>
-<textarea id="freeform3" name="freeform3" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
-<br/>
-<a class="waves-effect waves-light btn" id="bucketButton3">save it!</a>
-</div>
-</div>
-
-<div class="column1">
-  <div class="row">
-<div id="title-card">
-  <textarea id="title" name="title" placeholder="Title Your Adventure here!"></textarea>
-  </div>
-<div id="list">
-  <img src="assets/images/basic image.png">
-    <label for="freeform4"></label> 
-</div>
-<textarea id="freeform4" name="freeform4" rows="4" cols="50" placeholder='Write about your adventrure here, so you can remember it later!'></textarea>
-<br/>
-<a class="waves-effect waves-light btn" id="bucketButton4">save it!</a>
-</div>
-</div>
-
-</article>          
-
-<summary>
-<div id="about">
-  <h1>About Us</h1>
-
-  <div class="column"> 
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src= "https://github.com/rachlally/bucket-list/blob/main/JP%20headshot.jpg?raw=true" alt="image of James Pace"> 
-        </div>
-        <div class="card-content">
-          <p>Hey, I am James and one thing I would love to do before I leave this blue rock is climb Mt. Rainer. I would also like to make past 72 so I can snowboard for free.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Portfolio link</a>
-        </div>
+          <button class="btn btn-outline-success justify-center" id="btn" type="submit">FILL MY BUCKET</button>
+          <div id="activity"></div>
+        </blockquote>
       </div>
     </div>
   </div>
 </div>
+  </section>
 
-  <div class="column">
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://github.com/rachlally/bucket-list/blob/main/Rachel%20Lally.jpg?raw=true">
-        </div>
-        <div class="card-content">
-          <p>My name is Rachel.  I live in White Salmon, WA with my partner, our dog, and a couple of chickens too.  Currently at the top of my bucket list is to go on ski-tour in Japan: skiing, eating, and onsen-soaking my way through the country.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Portfolio link</a>
+<!-- Google Map Window -->
+  <div class="column2">
+    <div class="row2">
+        <div class="card2">
+  <div class="google map div">
+    <h6> Google Maps </h6>
+    <div id="container"></div>
+    <div id="map"></div>
+  </div>
+</div>
+</div>
+</div>
+
+
+  <div class="column2">
+    <div class="row2">
+        <div class="card2">
+          <h5>Bucket List</h5>
+          <form id="bucket-list-form">
+            <label for="bucket-input"></label>
+            <input type="text" placeholder="I'm going to..." name="bucket-input" id="bucket-input" />
+          </form>
+          <ul id="bucket-list"></ul>
         </div>
       </div>
     </div>
   </div>
-</div>
+</aside>
 
- <div class="column">
- <div class="row">
-  <div class="col s12 m7">
-    <div class="card">
-      <div class="card-image">
-        <img src="https://github.com/rachlally/bucket-list/blob/main/DSC06409.jpg?raw=true">
-      </div>
-      <div class="card-content">
-        <p>Hello, my name is Sharrod, and I am from Indiana.  I don't plan on dying anytime soon, but one thing that I would like to add to my bucket list is piloting an airplane. That would be pretty sick!</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Portfolio link</a>
+<!-- Scrapbook/Journal entry -->
+  <article id="scrapbook">
+    <div class="column1">
+      <div class="row">
+        <div id="title-card">
+          <textarea id="title1" name="title1" placeholder="Title Your Adventure here!"></textarea>
+        </div>
+        <div>
+          <img src="assets/images/basic image.png">
+          <label for="freeform1">
+
+          </label>
+        </div>
+        <textarea id="freeform1" name="freeform1" rows="4" cols="50"
+          placeholder='Write about your adventure here, so you can remember it later!'></textarea>
+        <br />
+        <a class="waves-effect waves-light btn" id="bucketButton1">save it!</a>
       </div>
     </div>
-  </div>
-</div>
-</div>
 
-  <div class="column">
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://github.com/rachlally/bucket-list/blob/main/bucketlistscrapbookimage.jpg?raw=true">
+    <div class="column1">
+      <div class="row">
+        <div id="title-card">
+          <textarea id="title2" name="title2" placeholder="Title Your Adventure here!"></textarea>
         </div>
-        <div class="card-content">
-          <p>Hello! I'm Jaeger and I'm one of the developers for Bucket List Scrapbook. I'm an avid gamer and enjoy outdoor activities like kayaking, paddleboarding and boating. If I had to put anything on my bucket list, it would be to travel through Asia and Europe for two months. I love experiencing other cultures through food, architecture, night life, museums and learning their histories. </p>
+        <div>
+          <img src="assets/images/basic image.png">
+          <label for="freeform2">
+
+          </label>
         </div>
-        <div class="card-action">
-          <a href="#">Portfolio link</a>
+        <textarea id="freeform2" name="freeform2" rows="4" cols="50"
+          placeholder='Write about your adventure here, so you can remember it later!'></textarea>
+        <br />
+        <a class="waves-effect waves-light btn" id="bucketButton2">save it!</a>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="row">
+        <div id="title-card">
+          <textarea id="title3" name="title3" placeholder="Title Your Adventure here!"></textarea>
+        </div>
+        <div>
+          <img src="assets/images/basic image.png">
+          <label for="freeform3">
+          </label>
+        </div>
+        <textarea id="freeform3" name="freeform3" rows="4" cols="50"
+          placeholder='Write about your adventure here, so you can remember it later!'></textarea>
+        <br />
+        <a class="waves-effect waves-light btn" id="bucketButton3">save it!</a>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="row">
+        <div id="title-card">
+          <textarea id="title4" name="title4" placeholder="Title Your Adventure here!"></textarea>
+        </div>
+        <div>
+          <img src="assets/images/basic image.png">
+          <label for="freeform4"></label>
+        </div>
+        <textarea id="freeform4" name="freeform4" rows="4" cols="50"
+          placeholder='Write about your adventure here, so you can remember it later!'></textarea>
+        <br />
+        <a class="waves-effect waves-light btn" id="bucketButton4">save it!</a>
+      </div>
+    </div>
+
+  </article>
+
+
+
+
+<aside>
+
+
+<!-- About Us Section -->
+  <div id="about">
+    <h1>About Us</h1>
+
+    <div class="column">
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://github.com/rachlally/bucket-list/blob/main/JP%20headshot.jpg?raw=true"
+                alt="image of James Pace">
+            </div>
+            <div class="card-content">
+              <p>Hey, I am James and one thing I would love to do before I leave this blue rock is climb Mt. Rainer. I
+                would also like to make past 72 so I can snowboard for free.</p>
+            </div>
+            <div class="card-action">
+              <a href="https://jpace2022.github.io/Portfolio/">Portfolio link</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</summary>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
+    <div class="column">
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://github.com/rachlally/bucket-list/blob/main/Rachel%20Lally.jpg?raw=true">
+            </div>
+            <div class="card-content">
+              <p>My name is Rachel. I live in White Salmon, WA with my partner, our dog, and a couple of chickens too.
+                Currently at the top of my bucket list is to go on ski-tour in Japan: skiing, eating, and onsen-soaking
+                my way through the country.</p>
+            </div>
+            <div class="card-action">
+              <a href="https://rachlally.github.io/advanced-css-portfolio/">Portfolio link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://github.com/rachlally/bucket-list/blob/main/DSC06409.jpg?raw=true">
+            </div>
+            <div class="card-content">
+              <p>Hello, my name is Sharrod, and I am from Indiana. I don't plan on dying anytime soon, but one thing
+                that I would like to add to my bucket list is piloting an airplane. That would be pretty sick!</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/swnova/Willanova">Portfolio link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://github.com/rachlally/bucket-list/blob/main/bucketlistscrapbookimage.jpg?raw=true">
+            </div>
+            <div class="card-content">
+              <p>Hello! I'm Jaeger and I'm one of the developers for Bucket List Scrapbook. I'm an avid gamer and enjoy
+                outdoor activities like kayaking, paddleboarding and boating. If I had to put anything on my bucket
+                list, it would be to travel through Asia and Europe for two months. I love experiencing other cultures
+                through food, architecture, night life, museums and learning their histories. </p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/JSnyder593/student-portfolio">Portfolio link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+
+    </summary>
+  </div>
+<!-- Footer -->
+
 <footer class="page-footer">
   <div class="nav-wrapper">
     <a href="#" class="brand-logo">Bucket List Scrapbook</a>
@@ -193,8 +270,26 @@
       
     </ul>
   </div>
-    © 2014 Copyright Text
-    </div>
-  </div>
+  © 2014 Copyright Text
+</div>
+</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>function initMap() {
+  const myLatLng = { lat: 47.608013, lng: -122.335167};
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: myLatLng,
+  });
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Hello World!",
+  });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI&callback=initMap"></script>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
