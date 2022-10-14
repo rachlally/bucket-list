@@ -75,6 +75,12 @@ bucketList.addEventListener("click", function(event){
     }
 })
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> dev
 //Save scrapbook activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
     var bucketActivity1 = $("#freeform1");
@@ -148,4 +154,7 @@ function getApi(event) {
  btn.addEventListener("click", getApi)
  
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> dev
