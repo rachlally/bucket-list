@@ -1,26 +1,30 @@
+
 <h1 align="center"> The Bucket-List...Helping you kick the bucket in style!</h1>
+
+# Bucket List Scrap Book
+To help you kick the bucket in style
 
 ## Discription
 Bucket List Scrapbook is a place where you can brainstorm bucket list items, complete them and store photos of your experiences! Bucket List Scrapbook is all about making memories by doing the things you've always wanted to do or by doing something that you would have never done in the first place. You can create a diary entry for each list item. On our site you can even show the location of where you've completed each Bucket List experience. If you're not sure of what to put on your bucket list, go ahead and click the "FILL MY BUCKET" button below!
 
-User story
+## User Story
 As A person kicking the bucket
 I WANT to fulfill my life goals and pursue interests
 SO THAT I can learn, grow, and feel accomplished
 
-Acceptance Criteria
-Given a bucket list scrapbook
-When I create a bucket list item
-Then it is saved for me in my list
+## Acceptance Criteria
+-Given a bucket list scrapbook
+-When I create a bucket list item 
+-Then it is saved for me in my list
 
-When I search my location and bucket list item
-Then I am presented with local options to explore
+-When I search my location and bucket list item
+-Then I am presented with local options to explore
 
-When I complete a bucket list item
-Then I can checkmark that it is completed
+-When I complete a bucket list item
+-Then I can checkmark that it is completed
 
-When I checkmark an item
-Then I can upload photos to the scrapbook
+-When I checkmark an item
+-Then I can upload photos to the scrapbook
 
 When I click on completed item
 Then I am presented with my photo
