@@ -64,15 +64,22 @@ bucketForm.addEventListener("submit", function (event){
 //       zoom: 4,
 //       center: uluru,
 //     });
-function initMap() {}
-$(()=> {
-    initMap = function(){
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat:47.602 , lon:-122.335}
-            
-        })
-    }
-})
+// function initMap() {}
+// $(()=> {
+//     initMap = function(){
+//         const uluru = { lat:parseFloat(47.608013),lon:parseFloat(-122.335167)};
+//         console.log(uluru)
+//         var map = new google.maps.Map(document.getElementById('map'), {
+//             zoom : 4, 
+//             center: uluru
+  
+//         })
+//         const marker = new google.maps.Marker({
+//             position: uluru,
+//             map: map,
+//           });
+//     }
+// })
 
 //Save activity input from user, on click, to local storage:
 saveBucketButton1.on("click", function () {
@@ -126,15 +133,14 @@ inIt()
 
 //Bored API Fetch function
 function getApi(event) {
-    
-     console.log(activity.value)
+    event.preventDefault()
+    //  console.log(activity.value)
      var requestUrl = 'https://www.boredapi.com/api/activity';
      fetch(requestUrl)
          .then(function(response) {
          return response.json();
      })
      .then(function(data) {
-        event.preventDefault()
          console.log(data)
          activity.textContent = data.activity
          
