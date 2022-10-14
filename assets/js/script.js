@@ -143,25 +143,9 @@ function getApi(event) {
          
      })
  }
- //getApi()
+ 
  //Fill My Bucket button to generate event for user
  btn.addEventListener("click", getApi)
  
 
-// Google Maps APi
-// AIzaSyD7wWUU2e0wjZ__Ds9BAWzuFFU19QhHLMI
-function initMap(){
-    const seattle = { lat:47.608, lng:-122.335};
-    const map = new google.Map(document.getElementById("map"),{
-        zoom: 4,
-        center: seattle,
-    });
-}
 
-const marker = new google.maps.Marker({
-    position: seattle,
-    map: map,
-});
-
-
-window.initMap = initMap();}
