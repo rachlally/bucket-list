@@ -49,7 +49,8 @@ h4 {
 }
 
 aside {
-background-image: linear-gradient(white, blue);
+  display: flex;
+  background-image: linear-gradient(white, blue);
 }
 
 article {
@@ -109,7 +110,7 @@ blockquote{
 
 .btn {
     font-weight: bolder;
-    font-size: 25px;
+    font-size: inherit;
     border-radius: 50px;
     margin: 25px;
     
@@ -263,6 +264,39 @@ base {
   
 }
 
+@media screen and (max-width: 768px) {
+  article,
+  aside,
+  summary {
+    background: rgb(194, 173, 230);
+  }
+
+  nav {
+    background: rgb(67, 69, 236)
+  }
+}
 
 
+@media screen and (max-width: 768px) {
+  article,
+  aside,
+  summary {
+    background: rgb(194, 173, 230);
+  }
 
+  nav {
+    background: rgb(67, 69, 236)
+  }
+}
+
+@media screen and (max-width: 680px) {
+  
+  aside {
+    flex-direction: column;
+        
+  }
+  nav {
+    font-size: 10px;
+  }
+  
+}
