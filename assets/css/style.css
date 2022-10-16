@@ -24,11 +24,13 @@ nav {
     background-image: linear-gradient(violet, blue);
     position: fixed;
     top: 0;
-    width: 100%;
+    height: 100px;
   }
 
+
+
 summary {
-  padding: 2%;
+  padding-bottom: 6%;
   background-image: linear-gradient(blue, white);
   margin: 0;
   color: white;
@@ -40,6 +42,14 @@ h1 {
     font-size: 40px;
     font-weight: bold;
     color: white;
+}
+
+.brand-logo{
+ float: none;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
 }
 
 h4 {
@@ -55,6 +65,15 @@ background-image: linear-gradient(white, blue);
 article {
     padding: 2%;
     background-image: linear-gradient(blue, white)
+}
+
+.header-image {
+  width: 175px;
+  height: 175px;
+  padding-top: 8px;
+  text-decoration: none;
+  font-weight: bold;
+
 }
 
 img{
@@ -100,7 +119,6 @@ section {
   text-align: left;
 }
 blockquote{
-    /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
@@ -158,7 +176,6 @@ h5 {
   label {
     font-size: 15px;
   }
-
 
 #freeform1 {
     width: 50%;
@@ -230,10 +247,6 @@ h5 {
     display: flex;
     gap: 10px;
     padding: 10px 0;
-}
-
-.thumbnail{
-    height: 192px;
 }
 
 .column {
