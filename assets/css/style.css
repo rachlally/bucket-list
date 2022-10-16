@@ -24,11 +24,13 @@ nav {
     background-image: linear-gradient(violet, blue);
     position: fixed;
     top: 0;
-    width: 100%;
+    height: 100px;
   }
 
+
+
 summary {
-  padding: 2%;
+  padding-bottom: 6%;
   background-image: linear-gradient(blue, white);
   margin: 0;
   color: white;
@@ -42,6 +44,14 @@ h1 {
     color: white;
 }
 
+.brand-logo{
+ float: none;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
+}
+
 h4 {
     padding: 0;
     font-size: 20px;
@@ -49,12 +59,22 @@ h4 {
 }
 
 aside {
-background-image: linear-gradient(white, blue);
+  display: flex;
+  background-image: linear-gradient(white, blue);
 }
 
 article {
     padding: 2%;
     background-image: linear-gradient(blue, white)
+}
+
+.header-image {
+  width: 175px;
+  height: 175px;
+  padding-top: 8px;
+  text-decoration: none;
+  font-weight: bold;
+
 }
 
 img{
@@ -100,7 +120,6 @@ section {
   text-align: left;
 }
 blockquote{
-    /*background-image: linear-gradient(white, blue);*/
     margin: 0;
     color: white;
     border-left: 0;
@@ -109,7 +128,7 @@ blockquote{
 
 .btn {
     font-weight: bolder;
-    font-size: 25px;
+    font-size: inherit;
     border-radius: 50px;
     margin: 25px;
     
@@ -158,7 +177,6 @@ h5 {
   label {
     font-size: 15px;
   }
-
 
 #freeform1 {
     width: 50%;
@@ -232,10 +250,6 @@ h5 {
     padding: 10px 0;
 }
 
-.thumbnail{
-    height: 192px;
-}
-
 .column {
   width: 25%;
   float: left;
@@ -263,6 +277,39 @@ base {
   
 }
 
+@media screen and (max-width: 768px) {
+  article,
+  aside,
+  summary {
+    background: rgb(194, 173, 230);
+  }
+
+  nav {
+    background: rgb(67, 69, 236)
+  }
+}
 
 
+@media screen and (max-width: 768px) {
+  article,
+  aside,
+  summary {
+    background: rgb(194, 173, 230);
+  }
 
+  nav {
+    background: rgb(67, 69, 236)
+  }
+}
+
+@media screen and (max-width: 680px) {
+  
+  aside {
+    flex-direction: column;
+        
+  }
+  nav {
+    font-size: 10px;
+  }
+  
+}

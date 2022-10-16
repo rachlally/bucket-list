@@ -148,4 +148,3 @@ function getApi(event) {
  btn.addEventListener("click", getApi)
  
 
-
